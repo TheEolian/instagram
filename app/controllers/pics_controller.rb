@@ -24,7 +24,7 @@ class PicsController < ApplicationController
 
 	def edit
 	end
-	
+
 	def update
 		if @pic.update(pic_params)
 			redirect_to @pic, notice: "Congrats! Pic was updated!"
@@ -32,12 +32,11 @@ class PicsController < ApplicationController
 			render 'edit'
 		end
 	end
-	
+
 	def destroy
 		@pic.destroy
 		redirect_to root_path
 	end
-
 
 	private
 
